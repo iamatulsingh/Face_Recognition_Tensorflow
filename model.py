@@ -4,29 +4,6 @@ from tensorflow.keras import regularizers
 
 def get_model():
     model = models.Sequential()
-    # model.add(Conv2D(32, (3, 3), padding='same', activation='relu', input_shape=(224, 224, 3)))
-    # model.add(MaxPool2D((2, 2)))
-    # model.add(Conv2D(64, (3, 3), padding='same', activation='relu'))
-    # model.add(MaxPool2D((2, 2)))
-    # model.add(Conv2D(64, (3, 3), padding='same', activation='relu'))
-    # model.add(MaxPool2D((2, 2)))
-    # model.add(Conv2D(128, (3, 3), padding='same', activation='relu'))
-    # model.add(MaxPool2D((2, 2)))
-    # model.add(Conv2D(256, (3, 3), padding='same', activation='relu'))
-    # model.add(MaxPool2D((2, 2)))
-    # model.add(Conv2D(512, (3, 3), padding='same', activation='relu'))
-    # model.add(MaxPool2D((2, 2)))
-    # model.add(Conv2D(1024, (3, 3), padding='same', activation='relu'))
-
-    # model.add(Conv2D(64, kernel_size=3, activation='relu', input_shape=(224, 224, 3)))
-    # model.add(MaxPool2D((2, 2)))
-    # model.add(Conv2D(32, kernel_size=3, activation='relu'))
-    # model.add(MaxPool2D((2, 2)))
-
-    # model.add(Flatten())
-    # model.add(Dense(64, activation='relu'))
-    # model.add(Dense(3, activation='softmax'))
-
     model.add(Conv2D(16, kernel_size=3,
                      activation='relu',
                      kernel_regularizer=regularizers.l2(0.),

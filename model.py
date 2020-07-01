@@ -1,6 +1,5 @@
 from tensorflow.keras import models
 from tensorflow.keras.layers import ZeroPadding2D, MaxPooling2D, Conv2D, Flatten, Dense, Dropout
-from tensorflow.keras import regularizers
 
 def get_model():
     model = models.Sequential()

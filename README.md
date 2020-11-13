@@ -14,7 +14,7 @@
 #### How to run the code?
 `pip install mtcnn` <br>
 `python3 main.py`
->NOTE you can comment or uncomment training code in main file according to your need.
+>NOTE you can comment or uncomment training code in main.py file according to your need.
 
 <br><br>
 ##### Model Accuracy

@@ -82,17 +82,11 @@ class FaceRecognition:
 
         FaceRecognition.plot_training(history)
 
-    def save_model(self, model_name):
-        model_path = "./model"
-        # if not os.path.exists(model_name):
-        #     os.mkdir(model_name)
-        if not os.path.exists(model_path):
-            os.mkdir(model_path)
-
-        self.model.save(os.path.join(model_path, model_name))
+    def save_model(self, model_path):
+        self.model.save(model_path)
         class_names = self.training_generator.class_indices
-        class_names_file_reverse = model_name[:-3] + "_class_names_reverse.npy"
-        class_names_file = model_name[:-3] + "_class_names.npy"
+        class_names_file_reverse = "class_names_reverse.npy"
+        class_names_file = "class_names.npy"
         np.save(os.path.join(model_path, class_names_file_reverse), class_names)
         class_names_reversed = np.load(os.path.join(model_path, class_names_file_reverse), allow_pickle=True).item()
         class_names = dict([(value, key) for key, value in class_names_reversed.items()])
@@ -104,7 +98,7 @@ class FaceRecognition:
         return model
 
     @staticmethod
-    def model_prediction(image_path, model_path, class_names_path):
+    def model_prediction(image_path, model_path):
         class_name = "None Class Name"
         face_array, face = get_detected_face(image_path)
         model = load_model(model_path)
@@ -114,7 +108,7 @@ class FaceRecognition:
         result = np.argmax(result, axis=1)
         index = result[0]
 
-        classes = np.load(class_names_path, allow_pickle=True).item()
+        classes = np.load(os.path.join(model_path, "class_names.npy"), allow_pickle=True).item()
         # print(classes, type(classes), classes.items())
         if type(classes) is dict:
             for k, v in classes.items():

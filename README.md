@@ -11,7 +11,7 @@
 
 ![model summary](https://github.com/iamatulsingh/Face_Recognition_Tensorflow/blob/master/screenshot/model_summary.png)
 
-#### How tu run the code?
+#### How to run the code?
 `pip install mtcnn` <br>
 `python3 main.py`
 >NOTE you can comment or uncomment training code in main file according to your need.

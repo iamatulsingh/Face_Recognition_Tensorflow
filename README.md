@@ -4,7 +4,7 @@
 [![built with Tensorflow2.x](https://img.shields.io/badge/built%20with-Tensorflow2.x-red.svg)](https://www.tensorflow.org/)
 
 #### This is a example of how to create your own dataset and Face Recognition Model without using any pre trained model.
-###### For creating dataset you have to capture picture of a person or you can scrape images from internet using one of my project on data scraping. You can clone data scraping project from here https://github.com/iamatulsingh/pinterest-image-scrap.git
+###### For creating dataset, you have to capture picture of a person or you can scrape images from internet using one of my project on data scraping. You can clone data scraping project from here https://github.com/iamatulsingh/pinterest-image-scrap.git
 
 <br><br>
 ##### Model Summary
